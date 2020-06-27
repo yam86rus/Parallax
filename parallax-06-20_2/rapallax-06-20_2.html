@@ -5,8 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax 06-20_2</title>
     <link rel="stylesheet" href="parallax-06-20_2.css">
+    <script src="parallax.js"></script>
 </head>
 <body>
-    <h2>parallax 06-20_2</h2>
+    <div class="container">
+        <ul id="scene">
+            <li class="layer" data-depth=".1">
+                <img src="img/text.png" alt="text">
+            </li>
+            <li class="layer" data-depth="1">
+                <img src="img/planet1.png" alt="planet1">
+            </li>
+            <li class="layer" data-depth="-1">
+                <img src="img/planet2.png" alt="planet2">
+            </li>
+            <li class="layer" data-depth="2">
+                <img src="img/astronaut.png" alt="astronaut">
+            </li>
+            <li class="layer" data-depth="0.5">
+                <img src="img/rocket.png" alt="rocket">
+            </li>
+        </ul>
+    </div>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene); 
+    </script>
 </body>
 </html>
